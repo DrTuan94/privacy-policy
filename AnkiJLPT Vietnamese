@@ -59,6 +59,18 @@
        <strong>A:</strong> Open the app, go to Settings → Restore Purchases.</p>
   </div>
 
+  <div class="card">
+    <h2>Privacy Policy & Terms</h2>
+    <p>You can view our Privacy Policy and Terms of Service at the link below:</p>
+    <p><a href="https://drtuan94.github.io/privacy-policy/" target="_blank">View Privacy Policy & Terms of Service</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Chính sách bảo mật & Điều khoản dịch vụ (Tiếng Việt)</h2>
+    <p>Bạn có thể xem Chính sách bảo mật và Điều khoản dịch vụ của chúng tôi tại liên kết bên dưới:</p>
+    <p><a href="https://drtuan94.github.io/privacy-policy/" target="_blank">Xem Chính sách & Điều khoản (Tiếng Việt)</a></p>
+  </div>
+
   <footer>
     © 2025 AnkiJLPT Vietnamese. All rights reserved.
   </footer>
