@@ -1,132 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Privacy Policy — Japanese Anki Flashcards</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Anki Flashcards - Learn Japanese Vocabulary</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;color:#111;margin:0;padding:0;background:#f7f7fb}
-        .container{max-width:900px;margin:40px auto;padding:28px;background:#fff;border-radius:12px;box-shadow:0 6px 24px rgba(12,20,40,0.08)}
-        h1,h2{color:#0b1220;margin-top:0}
-        h1{font-size:28px}
-        h2{font-size:18px;margin-top:24px}
-        p{margin:12px 0}
-        .meta{color:#556; font-size:14px}
-        code{background:#eef;padding:2px 6px;border-radius:4px}
-        footer{margin-top:28px;color:#556;font-size:14px}
-        a.button{display:inline-block;padding:10px 14px;background:#0b79d0;color:#fff;border-radius:8px;text-decoration:none}
-        .lang-toggle{margin-bottom:16px;text-align:center}
-        .lang-toggle button{margin:0 4px 8px 0;padding:8px 16px;border:none;border-radius:6px;background:#e0e0e0;color:#111;cursor:pointer;font-weight:500;font-size:14px}
-        .lang-toggle button.active{background:#0b79d0;color:#fff}
-        .content-section{display:none}
-        .content-section.active{display:block}
+        /* Custom styles for aesthetic font and smooth transitions */
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+        .container-card {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Privacy Policy — Japanese Anki Flashcards</h1>
-        <p class="meta">Last Updated: <strong>November 17, 2025</strong></p>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+    <div class="container-card w-full max-w-4xl bg-white rounded-xl p-8 md:p-12">
+        
+        <!-- Header and Language Toggle -->
+        <header class="mb-8 border-b pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-4 sm:mb-0">
+                <span class="text-indigo-600">がんばれ!</span> Japanese Anki Flashcards
+            </h1>
 
-        <div class="lang-toggle">
-            <button onclick="switchLang('en', this)" class="active">🇺🇸 English</button>
-            <button onclick="switchLang('vi', this)">🇻🇳 Tiếng Việt</button>
+            <!-- Language Toggle Buttons -->
+            <div class="lang-toggle flex space-x-2 p-1 bg-gray-100 rounded-lg" role="tablist">
+                <button
+                    id="btn-en"
+                    onclick="switchLang('en', this)"
+                    class="lang-button px-4 py-2 text-sm font-medium rounded-lg transition duration-150 active-lang-btn"
+                >
+                    🇺🇸 English
+                </button>
+                <button
+                    id="btn-vi"
+                    onclick="switchLang('vi', this)"
+                    class="lang-button px-4 py-2 text-sm font-medium rounded-lg transition duration-150 bg-gray-100 text-gray-700 hover:bg-gray-200"
+                >
+                    🇻🇳 Tiếng Việt
+                </button>
+            </div>
+        </header>
+
+        <!-- English Content -->
+        <div id="content-en" class="lang-content">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Master Japanese Vocabulary, Your Way.</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Japanese Anki Flashcards is the essential companion for your Japanese learning journey. Our app uses spaced repetition (SRS) and intelligent quizzes to help you memorize vocabulary efficiently and retain it long-term.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <!-- Feature 1 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 001 12c0 3.868 2.067 7.318 5.114 9.176a11.952 11.952 0 0013.772 0C20.933 19.318 23 15.868 23 12a12.02 12.02 0 00-3.382-7.016z"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Intelligent SRS</h3>
+                        <p class="text-sm text-gray-600">Our Spaced Repetition System adapts to your memory, showing you flashcards right before you forget them.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Offline & Local</h3>
+                        <p class="text-sm text-gray-600">All your study data is stored locally on your device. Learn anywhere, anytime, without needing an internet connection.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Customizable Decks</h3>
+                        <p class="text-sm text-gray-600">Create, import, and manage your own vocabulary decks tailored precisely to your study materials and goals.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Zero Privacy Risk</h3>
+                        <p class="text-sm text-gray-600">We collect zero personal data. Your progress is your own and never leaves your device.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#download" class="inline-block px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg shadow-indigo-200">
+                    Get Started Now
+                </a>
+            </div>
         </div>
 
-        <div id="content-en" class="content-section active">
-            <h2>1. Introduction</h2>
-            <p>Welcome to **Japanese Anki Flashcards** ("the app"). We respect your privacy and are committed to protecting any personal information you provide while using the app. This policy explains how we collect, use, and protect data.</p>
-            
-            <h2>2. Data Collection</h2>
-            <p>The app **does not collect any personal data** from users. Specifically:</p>
-            <ul>
-                <li>No login information, email, or name is collected.</li>
-                <li>No location tracking.</li>
-                <li>No cookies or third-party analytics services.</li>
-                <li>No study data is sent to external servers.</li>
-            </ul>
-            <p>All study data entered by the user (e.g., vocabulary you add, learning progress, quiz results) is **stored locally on your device** and is never transmitted to any server.</p>
-            
-            <h2>3. Data Usage</h2>
-            <p>Since the app does not collect personal data, we do not use or process any personal data on external servers.</p>
-            
-            <h2>4. Data Sharing</h2>
-            <p>We **do not share** user data with any third parties, including advertisers, analytics providers, or other partners.</p>
-            
-            <h2>5. Data Stored on Device</h2>
-            <p>All information entered by the user is stored locally on the device. If you uninstall the app or clear its data, this information will be deleted from the device.</p>
-            
-            <h2>6. User Rights</h2>
-            <p>Since no data is sent to our servers, you do not need to request access or deletion from us. To erase all study data, simply uninstall the app or use the in-app data-clearing feature (if available).</p>
-            
-            <h2>7. Security</h2>
-            <p>Because the app does not transmit data externally, there is *no risk* of data leaks from our servers. However, you should secure your device (password, screen lock) to protect locally stored data.</p>
-            
-            <h2>8. Contact</h2>
-            <p>If you have any questions or privacy-related requests, please contact us via email: **support@japaneseankiflashcards.com**.</p>
-            
-            <h2>9. Policy Changes</h2>
-            <p>We may update this Privacy Policy from time to time. Any changes will be posted at this URL and take effect upon posting. Please check this page regularly for the latest version.</p>
+        <!-- Vietnamese Content (Initially hidden) -->
+        <div id="content-vi" class="lang-content hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Thành thạo từ vựng tiếng Nhật, theo cách của bạn.</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+                Japanese Anki Flashcards là người bạn đồng hành thiết yếu trên hành trình học tiếng Nhật của bạn. Ứng dụng của chúng tôi sử dụng hệ thống lặp lại ngắt quãng (SRS) và các bài kiểm tra thông minh để giúp bạn ghi nhớ từ vựng hiệu quả và duy trì lâu dài.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-10">
+                <!-- Feature 1 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 001 12c0 3.868 2.067 7.318 5.114 9.176a11.952 11.952 0 0013.772 0C20.933 19.318 23 15.868 23 12a12.02 12.02 0 00-3.382-7.016z"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">SRS thông minh</h3>
+                        <p class="text-sm text-gray-600">Hệ thống lặp lại ngắt quãng (SRS) của chúng tôi thích ứng với trí nhớ của bạn, hiển thị flashcard ngay trước khi bạn có nguy cơ quên chúng.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Ngoại tuyến & Cục bộ</h3>
+                        <p class="text-sm text-gray-600">Tất cả dữ liệu học tập của bạn được lưu trữ cục bộ trên thiết bị. Học mọi lúc, mọi nơi mà không cần kết nối internet.</p>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Bộ thẻ tùy chỉnh</h3>
+                        <p class="text-sm text-gray-600">Tạo, nhập và quản lý bộ từ vựng của riêng bạn, được điều chỉnh chính xác theo tài liệu và mục tiêu học tập của bạn.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="flex items-start space-x-4 p-4 bg-indigo-50 rounded-lg">
+                    <svg class="w-6 h-6 text-indigo-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Không rủi ro riêng tư</h3>
+                        <p class="text-sm text-gray-600">Chúng tôi không thu thập bất kỳ dữ liệu cá nhân nào. Tiến trình của bạn là của riêng bạn và không bao giờ rời khỏi thiết bị.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#download" class="inline-block px-8 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-lg shadow-indigo-200">
+                    Bắt đầu ngay
+                </a>
+            </div>
         </div>
 
-        <div id="content-vi" class="content-section">
-            <h2>1. Giới thiệu</h2>
-            <p>Chào mừng bạn đến với **Japanese Anki Flashcards** ("ứng dụng"). Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ mọi thông tin cá nhân mà bạn cung cấp khi sử dụng ứng dụng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu.</p>
-            
-            <h2>2. Thu thập dữ liệu</h2>
-            <p>Ứng dụng **không thu thập bất kỳ dữ liệu cá nhân nào** từ người dùng. Cụ thể:</p>
-            <ul>
-                <li>Không thu thập thông tin đăng nhập, email hoặc tên.</li>
-                <li>Không theo dõi vị trí.</li>
-                <li>Không sử dụng cookie hay dịch vụ phân tích của bên thứ ba.</li>
-                <li>Không gửi dữ liệu học tập lên máy chủ bên ngoài.</li>
-            </ul>
-            <p>Mọi dữ liệu học tập do người dùng nhập (ví dụ: từ vựng bạn thêm, tiến trình học, kết quả Quiz) được **lưu trữ cục bộ trên thiết bị** và không được truyền lên máy chủ.</p>
-            
-            <h2>3. Sử dụng dữ liệu</h2>
-            <p>Vì ứng dụng không thu thập dữ liệu cá nhân, nên chúng tôi không sử dụng hay xử lý bất kỳ dữ liệu cá nhân nào trên máy chủ bên ngoài.</p>
-            
-            <h2>4. Chia sẻ dữ liệu</h2>
-            <p>Chúng tôi **không chia sẻ dữ liệu** người dùng với bất kỳ bên thứ ba nào, bao gồm nhà quảng cáo, bên phân tích hoặc đối tác khác.</p>
-            
-            <h2>5. Dữ liệu lưu trữ trên thiết bị</h2>
-            <p>Tất cả thông tin do người dùng nhập sẽ được lưu cục bộ trên thiết bị. Nếu bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng, các dữ liệu này sẽ bị xóa khỏi thiết bị.</p>
-            
-            <h2>6. Quyền của người dùng</h2>
-            <p>Vì không có dữ liệu được gửi đến máy chủ, bạn không cần yêu cầu truy cập hoặc xóa dữ liệu từ chúng tôi. Nếu bạn muốn xóa toàn bộ dữ liệu học, hãy xóa ứng dụng hoặc sử dụng chức năng xóa dữ liệu (nếu có) trong ứng dụng.</p>
-            
-            <h2>7. Bảo mật</h2>
-            <p>Do ứng dụng không truyền dữ liệu ra ngoài, rủi ro lộ dữ liệu từ máy chủ là *không có*. Tuy nhiên, bạn nên đảm bảo thiết bị của mình được bảo mật (mật mã, khóa màn hình) để bảo vệ dữ liệu được lưu cục bộ.</p>
-            
-            <h2>8. Liên hệ</h2>
-            <p>Nếu bạn có câu hỏi hoặc yêu cầu liên quan đến quyền riêng tư, vui lòng liên hệ qua email: **support@japaneseankiflashcards.com**.</p>
-            
-            <h2>9. Thay đổi chính sách</h2>
-            <p>Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Mọi thay đổi sẽ được đăng tại URL này và hiệu lực khi được cập nhật. Vui lòng kiểm tra trang thường xuyên để biết phiên bản mới nhất.</p>
-        </div>
-
-        <footer>
-            <p>© **Japanese Anki Flashcards**</p>
+        <!-- Footer -->
+        <footer class="mt-12 pt-6 border-t text-center text-gray-500 text-sm">
+            &copy; 2025 Japanese Anki Flashcards. All rights reserved.
         </footer>
     </div>
 
     <script>
-        // Function now accepts the language code AND the button element that was clicked
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial setup: Apply active style to the default English button
+            const defaultButton = document.getElementById('btn-en');
+            if (defaultButton) {
+                // Initial state styling, handled by the switchLang function for consistency
+                switchLang('en', defaultButton);
+            }
+        });
+
+        // Function to handle language switching
         function switchLang(lang, clickedButton) {
-            // Hide all content sections
-            document.querySelectorAll('.content-section').forEach(el => {
-                el.classList.remove('active');
+            // 1. Hide all content sections and remove 'hidden' if present
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.add('hidden');
             });
-            
-            // Show selected content
-            document.getElementById('content-' + lang).classList.add('active');
-            
-            // Update button states (remove 'active' from all buttons)
-            document.querySelectorAll('.lang-toggle button').forEach(btn => {
-                btn.classList.remove('active');
+
+            // 2. Show the selected content
+            const contentElement = document.getElementById(`content-${lang}`);
+            if (contentElement) {
+                contentElement.classList.remove('hidden');
+            }
+
+            // 3. Update button states (remove active styling from all buttons)
+            document.querySelectorAll('.lang-toggle .lang-button').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white', 'hover:bg-indigo-700');
+                btn.classList.add('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
             });
-            
-            // Use the passed element (clickedButton) to set the 'active' class
-            clickedButton.classList.add('active');
+
+            // 4. Set the clicked button as active
+            if (clickedButton) {
+                clickedButton.classList.remove('bg-gray-100', 'text-gray-700', 'hover:bg-gray-200');
+                clickedButton.classList.add('bg-indigo-600', 'text-white', 'hover:bg-indigo-700');
+            }
         }
     </script>
 </body>
