@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,50 +15,109 @@
     code{background:#eef;padding:2px 6px;border-radius:4px}
     footer{margin-top:28px;color:#556;font-size:14px}
     a.button{display:inline-block;padding:10px 14px;background:#0b79d0;color:#fff;border-radius:8px;text-decoration:none}
+    .lang-toggle{margin-bottom:16px}
+    .lang-toggle button{margin-right:8px;padding:6px 12px;border:none;border-radius:6px;background:#e0e0e0;color:#111;cursor:pointer;font-weight:500}
+    .lang-toggle button.active{background:#0b79d0;color:#fff}
+    [lang]{display:none}
+    [lang].active{display:block}
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Privacy Policy — Japanese Anki Flashcards</h1>
-    <p class="meta">Last Updated: <strong>[Bạn điền ngày]</strong></p>
+    <p class="meta">Last Updated: <strong>[Insert date here] / [Bạn điền ngày]</strong></p>
 
-    <h2>1. Giới thiệu</h2>
-    <p>Chào mừng bạn đến với <strong>Japanese Anki Flashcards</strong> ("ứng dụng"). Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ mọi thông tin cá nhân mà bạn cung cấp khi sử dụng ứng dụng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu.</p>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+      <button onclick="switchLang('en')" class="active" id="btn-en">English</button>
+      <button onclick="switchLang('vi')" id="btn-vi">Tiếng Việt</button>
+    </div>
 
-    <h2>2. Thu thập dữ liệu</h2>
-    <p>Ứng dụng <strong>không thu thập bất kỳ dữ liệu cá nhân nào</strong> từ người dùng. Cụ thể:</p>
-    <ul>
-      <li>Không thu thập thông tin đăng nhập, email hoặc tên.</li>
-      <li>Không theo dõi vị trí.</li>
-      <li>Không sử dụng cookie hay dịch vụ phân tích của bên thứ ba.</li>
-      <li>Không gửi dữ liệu học tập lên máy chủ bên ngoài.</li>
-    </ul>
-    <p>Mọi dữ liệu học tập do người dùng nhập (ví dụ: từ vựng bạn thêm, tiến trình học, kết quả Quiz) được <strong>lưu trữ cục bộ trên thiết bị</strong> và không được truyền lên máy chủ.</p>
+    <!-- English Version -->
+    <div lang="en" class="active">
+      <h2>1. Introduction</h2>
+      <p>Welcome to <strong>Japanese Anki Flashcards</strong> ("the app"). We respect your privacy and are committed to protecting any personal information you provide while using the app. This policy explains how we collect, use, and protect data.</p>
+      <h2>2. Data Collection</h2>
+      <p>The app <strong>does not collect any personal data</strong> from users. Specifically:</p>
+      <ul>
+        <li>No login information, email, or name is collected.</li>
+        <li>No location tracking.</li>
+        <li>No cookies or third-party analytics services.</li>
+        <li>No study data is sent to external servers.</li>
+      </ul>
+      <p>All study data entered by the user (e.g., vocabulary you add, learning progress, quiz results) is <strong>stored locally on your device</strong> and is never transmitted to any server.</p>
+      <h2>3. Data Usage</h2>
+      <p>Since the app does not collect personal data, we do not use or process any personal data on external servers.</p>
+      <h2>4. Data Sharing</h2>
+      <p>We <strong>do not share</strong> user data with any third parties, including advertisers, analytics providers, or other partners.</p>
+      <h2>5. Data Stored on Device</h2>
+      <p>All information entered by the user is stored locally on the device. If you uninstall the app or clear its data, this information will be deleted from the device.</p>
+      <h2>6. User Rights</h2>
+      <p>Since no data is sent to our servers, you do not need to request access or deletion from us. To erase all study data, simply uninstall the app or use the in-app data-clearing feature (if available).</p>
+      <h2>7. Security</h2>
+      <p>Because the app does not transmit data externally, there is <em>no risk</em> of data leaks from our servers. However, you should secure your device (password, screen lock) to protect locally stored data.</p>
+      <h2>8. Contact</h2>
+      <p>If you have any questions or privacy-related requests, please contact us via email: <strong>[insert your support email here]</strong>.</p>
+      <h2>9. Policy Changes</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted at this URL and take effect upon posting. Please check this page regularly for the latest version.</p>
+    </div>
 
-    <h2>3. Sử dụng dữ liệu</h2>
-    <p>Vì ứng dụng không thu thập dữ liệu cá nhân, nên chúng tôi không sử dụng hay xử lý bất kỳ dữ liệu cá nhân nào trên máy chủ bên ngoài.</p>
-
-    <h2>4. Chia sẻ dữ liệu</h2>
-    <p>Chúng tôi <strong>không chia sẻ dữ liệu</strong> người dùng với bất kỳ bên thứ ba nào, bao gồm nhà quảng cáo, bên phân tích hoặc đối tác khác.</p>
-
-    <h2>5. Dữ liệu lưu trữ trên thiết bị</h2>
-    <p>Tất cả thông tin do người dùng nhập sẽ được lưu cục bộ trên thiết bị. Nếu bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng, các dữ liệu này sẽ bị xóa khỏi thiết bị.</p>
-
-    <h2>6. Quyền của người dùng</h2>
-    <p>Vì không có dữ liệu được gửi đến máy chủ, bạn không cần yêu cầu truy cập hoặc xóa dữ liệu từ chúng tôi. Nếu bạn muốn xóa toàn bộ dữ liệu học, hãy xóa ứng dụng hoặc sử dụng chức năng xóa dữ liệu (nếu có) trong ứng dụng.</p>
-
-    <h2>7. Bảo mật</h2>
-    <p>Do ứng dụng không truyền dữ liệu ra ngoài, rủi ro lộ dữ liệu từ máy chủ là <em>không có</em>. Tuy nhiên, bạn nên đảm bảo thiết bị của mình được bảo mật (mật mã, khóa màn hình) để bảo vệ dữ liệu được lưu cục bộ.</p>
-
-    <h2>8. Liên hệ</h2>
-    <p>Nếu bạn có câu hỏi hoặc yêu cầu liên quan đến quyền riêng tư, vui lòng liên hệ qua email: <strong>[nhập email hỗ trợ của bạn tại đây]</strong>.</p>
-
-    <h2>9. Thay đổi chính sách</h2>
-    <p>Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Mọi thay đổi sẽ được đăng tại URL này và hiệu lực khi được cập nhật. Vui lòng kiểm tra trang thường xuyên để biết phiên bản mới nhất.</p>
+    <!-- Vietnamese Version -->
+    <div lang="vi">
+      <h2>1. Giới thiệu</h2>
+      <p>Chào mừng bạn đến với <strong>Japanese Anki Flashcards</strong> ("ứng dụng"). Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ mọi thông tin cá nhân mà bạn cung cấp khi sử dụng ứng dụng. Chính sách này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ dữ liệu.</p>
+      <h2>2. Thu thập dữ liệu</h2>
+      <p>Ứng dụng <strong>không thu thập bất kỳ dữ liệu cá nhân nào</strong> từ người dùng. Cụ thể:</p>
+      <ul>
+        <li>Không thu thập thông tin đăng nhập, email hoặc tên.</li>
+        <li>Không theo dõi vị trí.</li>
+        <li>Không sử dụng cookie hay dịch vụ phân tích của bên thứ ba.</li>
+        <li>Không gửi dữ liệu học tập lên máy chủ bên ngoài.</li>
+      </ul>
+      <p>Mọi dữ liệu học tập do người dùng nhập (ví dụ: từ vựng bạn thêm, tiến trình học, kết quả Quiz) được <strong>lưu trữ cục bộ trên thiết bị</strong> và không được truyền lên máy chủ.</p>
+      <h2>3. Sử dụng dữ liệu</h2>
+      <p>Vì ứng dụng không thu thập dữ liệu cá nhân, nên chúng tôi không sử dụng hay xử lý bất kỳ dữ liệu cá nhân nào trên máy chủ bên ngoài.</p>
+      <h2>4. Chia sẻ dữ liệu</h2>
+      <p>Chúng tôi <strong>không chia sẻ dữ liệu</strong> người dùng với bất kỳ bên thứ ba nào, bao gồm nhà quảng cáo, bên phân tích hoặc đối tác khác.</p>
+      <h2>5. Dữ liệu lưu trữ trên thiết bị</h2>
+      <p>Tất cả thông tin do người dùng nhập sẽ được lưu cục bộ trên thiết bị. Nếu bạn gỡ ứng dụng hoặc xóa dữ liệu trong ứng dụng, các dữ liệu này sẽ bị xóa khỏi thiết bị.</p>
+      <h2>6. Quyền của người dùng</h2>
+      <p>Vì không có dữ liệu được gửi đến máy chủ, bạn không cần yêu cầu truy cập hoặc xóa dữ liệu từ chúng tôi. Nếu bạn muốn xóa toàn bộ dữ liệu học, hãy xóa ứng dụng hoặc sử dụng chức năng xóa dữ liệu (nếu có) trong ứng dụng.</p>
+      <h2>7. Bảo mật</h2>
+      <p>Do ứng dụng không truyền dữ liệu ra ngoài, rủi ro lộ dữ liệu từ máy chủ là <em>không có</em>. Tuy nhiên, bạn nên đảm bảo thiết bị của mình được bảo mật (mật mã, khóa màn hình) để bảo vệ dữ liệu được lưu cục bộ.</p>
+      <h2>8. Liên hệ</h2>
+      <p>Nếu bạn có câu hỏi hoặc yêu cầu liên quan đến quyền riêng tư, vui lòng liên hệ qua email: <strong>[nhập email hỗ trợ của bạn tại đây]</strong>.</p>
+      <h2>9. Thay đổi chính sách</h2>
+      <p>Chúng tôi có thể cập nhật Chính sách quyền riêng tư này theo thời gian. Mọi thay đổi sẽ được đăng tại URL này và hiệu lực khi được cập nhật. Vui lòng kiểm tra trang thường xuyên để biết phiên bản mới nhất.</p>
+    </div>
 
     <footer>
       <p>© <strong>Japanese Anki Flashcards</strong></p>
     </footer>
   </div>
+
+  <script>
+    function switchLang(lang) {
+      // Hide all language sections
+      document.querySelectorAll('[lang]').forEach(el => {
+        el.classList.remove('active');
+      });
+      // Show selected language
+      document.querySelector(`[lang="${lang}"]`).classList.add('active');
+
+      // Update button states
+      document.getElementById('btn-en').classList.remove('active');
+      document.getElementById('btn-vi').classList.remove('active');
+      document.getElementById(`btn-${lang}`).classList.add('active');
+    }
+
+    // Optional: Auto-detect browser language on load
+    window.addEventListener('DOMContentLoaded', () => {
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (browserLang.startsWith('vi')) {
+        switchLang('vi');
+      }
+    });
+  </script>
 </body>
 </html>
